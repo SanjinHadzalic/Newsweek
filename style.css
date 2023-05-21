@@ -1,3 +1,25 @@
 *{
-    color: aquamarine;
+    color: black;
+}
+header{
+    background-color: red;
+}
+ul{
+    list-style: none;
+}
+li{
+    display: inline;
+}
+
+img{
+    width: 200px;
+}
+.column{
+    float: left;
+    width: 33.3%;
+}
+.row::after{
+    content: "";
+    display: table;
+    clear: both;
 }
