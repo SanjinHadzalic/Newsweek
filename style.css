@@ -1,8 +1,23 @@
 *{
-    color: black;
+    /* color: black; */
+    margin: 0;
 }
-header{
-    background-color: red;
+
+.upperHeader{
+  background-color: red;
+  display: flex;
+  width: 100%;
+}
+.upperHeader p{
+  width: 40%;
+  padding-top: 15px;
+  padding-left: 10px;
+  font-size: 10px;
+  font-family: cursive;
+  color: white;
+}
+.upperHeader h2{
+  width: 60%;
 }
 nav ul {
     list-style-type: none;
@@ -14,8 +29,14 @@ nav ul {
   
   nav ul li {
     flex-grow: 1;
+    border-right: 2px solid #c4c4c4;
+    display: inline-block;
+    float: left;
+    padding: 0 15px;
   }
-  
+  nav ul li:last-child {
+    border-right: 0;
+  }
   nav ul li a {
     display: block;
     text-decoration: none;
