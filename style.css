@@ -4,14 +4,26 @@
 header{
     background-color: red;
 }
-ul{
-    list-style: none;
-}
-li{
-    display: inline;
-}
-
-img{
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  nav ul li {
+    flex-grow: 1;
+  }
+  
+  nav ul li a {
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    padding: 10px;
+    background-color: white;
+    color: black;
+  }img{
     width: 200px;
 }
 .column{
