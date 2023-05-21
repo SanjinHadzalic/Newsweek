@@ -162,6 +162,24 @@ img{
   text-decoration: none;
   color: black;
 }
+.articleBttn{
+  color: white;
+  background-color: red;
+  padding: 5px;
+  margin: 10px;
+  display: inline-block;
+}
+.articleTitle{
+  color: black;
+  text-transform: uppercase;
+}
+.articleImage{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  height: 700px;
+}
 footer{
   height: 100px;
 }
