@@ -24,7 +24,7 @@
                 </nav>
             </div>
         </header>
-        <section>
+        <section id="formSection">
            <form name="unosForm" action="skripta.php" method="post">
                 <label for="naslov">Naslov vijesti:</label><br>
                 <input type="text" name="naslov"><br><br>
@@ -47,11 +47,9 @@
                 <label for="slika">Slika:</label><br>
                 <input type="file" accept="image/jpg,image/gif" name="slika"/><br><br>
 
-                <label for="check">Okvir:</label><br>
+                <label for="check">Spremiti u arhivu:</label><br>
                 <input type="checkbox" name="da">
-                <label for="da">da</label>
-                <input type="checkbox" name="ne">
-                <label for="ne">ne</label><br>
+                <label for="da">da</label><br><br>
 
                 <input type="submit" value="Pošalji">
            </form>
