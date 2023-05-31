@@ -197,10 +197,20 @@ footer{
   border: 1px solid #c4c4c4;
 }
 /*forma*/
-body{
-  text-align: center;
+#noviClanak{
+  padding: 20px;
 }
-form{
-  display: inline-block;
+.unosKategorija{
+  text-decoration: underline blue 3px;
+  font-weight: bold;
+}
+.formClanakNaslov{
+  text-transform: uppercase;
+}
+.slika{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
 }
 }

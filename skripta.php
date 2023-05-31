@@ -25,19 +25,44 @@
             </div>
         </header>
         <section id="noviClanak">
-            <h2>
-                <?php
-                    echo ""; 
+            <div class="row">
+                <p class="unosKategorija">
+                    <?php
+                        echo $_POST['newsCategory']."<br><br>"; 
                     ?>
-            </h2>
+                </p>
+                <h1 class="formClanakNaslov">
+                    <?php
+                    echo $_POST['naslov']."<br><br>";
+                    ?>
+                </h1>
+                <p>
+                    AUTOR:
+                </p>
+                <p>
+                    OBJAVLJENO:<br><br>
+                </p>
+            </div>
+            <section class="slika">
                 <?php
-                    echo $_POST['naslov']."<br>";
-                    echo $_POST['kratki']."<br>";
-                    echo $_POST['sadrzaj']."<br>";
-                    if(isset($_POST['da'])){
-                        echo "Checkbox je oznacen!";
-                    }
+                    $slika=$_POST['slika'];
+                    echo "<img src='images/$slika'"."<br><br>";
                 ?>
+            </section>
+            <section class="about">
+                <p>
+                    <?php
+                    echo $_POST['kratki']."<br><br>";
+                    ?>
+                </p>
+            </section>
+            <section>
+                <p>
+                    <?php
+                        echo $_POST['sadrzaj']."<br><br>";
+                    ?>
+                </p>
+            </section>
         </section>
         <footer>
             <p>
