@@ -50,7 +50,7 @@
                         echo $_POST['sadrzaj']."<br><br>";
                     ?>
                     <?php
-                        if(isset($_POST['da'])){
+                        if(isset($_POST['arhiva'])){
                             include 'insert.php';
                         }
                     ?>

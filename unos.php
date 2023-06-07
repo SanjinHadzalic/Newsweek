@@ -36,9 +36,9 @@
                 <label for="slika">Slika:</label><br>
                 <input type="file" accept="image/jpg,image/gif" name="slika"/><br><br>
 
-                <label for="check">Spremiti u arhivu:</label><br>
-                <input type="checkbox" name="da">
-                <label for="da">da</label><br><br>
+                <label for="arhiva">Spremiti u arhivu:</label><br>
+                <input type="checkbox" name="arhiva">
+                <label for="daArhiva">da</label><br><br>
 
                 <input type="submit" value="Pošalji" name="teset">
            </form>
