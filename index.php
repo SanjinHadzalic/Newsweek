@@ -9,24 +9,8 @@
     <body>
         <header>
             <?php
-            include('header.php');
-            
+                include('header.php');
             ?>
-            <!-- <div class="upperHeader">
-                <p>Sat, May 18, 2019</p>
-                <h1>Newsweek</h1>                
-            </div>
-            <div class="bottomHeader">
-                <nav>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="#us">U.S.</a></li>
-                        <li><a href="#world">World</a></li>
-                        <li><a href="">Administracija</a></li>
-                        <li><a href="unos.php">Unos</a></li>
-                    </ul>
-                </nav>
-            </div> -->
         </header>
         <section class="row">
             <hr class="hrMain">
@@ -85,10 +69,9 @@
             </article>
         </section>
         <footer>
-            <p>
-                Sanjin Hadžalić, shadzalic@tvz.hr, 2023.
-            </p>
-            <hr class="hrFooter">
+            <?php
+                include('footer.php');
+            ?>
         </footer>
     </body>
 </hmtl>

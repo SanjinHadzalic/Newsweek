@@ -44,10 +44,9 @@
            </form>
         </section>
         <footer>
-            <p>
-                Sanjin Hadžalić, shadzalic@tvz.hr, 2023.
-            </p>
-            <hr class="hrFooter">
+            <?php
+                include('footer.php');
+            ?>
         </footer>
     </body>
 </hmtl>
