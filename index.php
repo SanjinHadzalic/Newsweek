@@ -8,7 +8,11 @@
     </head>
     <body>
         <header>
-            <div class="upperHeader">
+            <?php
+            include('header.php');
+            
+            ?>
+            <!-- <div class="upperHeader">
                 <p>Sat, May 18, 2019</p>
                 <h1>Newsweek</h1>                
             </div>
@@ -22,7 +26,7 @@
                         <li><a href="unos.php">Unos</a></li>
                     </ul>
                 </nav>
-            </div>
+            </div> -->
         </header>
         <section class="row">
             <hr class="hrMain">
