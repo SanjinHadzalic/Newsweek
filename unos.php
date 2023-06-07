@@ -19,13 +19,14 @@
                         <li><a href="#us">U.S.</a></li>
                         <li><a href="#world">World</a></li>
                         <li><a href="">Administracija</a></li>
-                        <li><a href="unos.html">Unos</a></li>
+                        <li><a href="unos.php">Unos</a></li>
                     </ul>
                 </nav>
             </div>
         </header>
         <section id="formSection">
-           <form enctype="multipart/form-data" name="unosForm" action="skripta.php" method="post">
+           <form enctype="multipart/form-data" action="skripta.php" method="post">
+
                 <label for="naslov">Naslov vijesti:</label><br>
                 <input type="text" name="naslov"><br><br>
 
@@ -45,38 +46,14 @@
                 </select><br><br>
 
                 <label for="slika">Slika:</label><br>
-                <input type="file" accept="image/jpg,image/gif" id="slika" name="slika"/><br><br>
+                <input type="file" accept="image/jpg,image/gif" name="slika"/><br><br>
 
                 <label for="check">Spremiti u arhivu:</label><br>
                 <input type="checkbox" name="da">
                 <label for="da">da</label><br><br>
 
-                <input type="submit" value="Pošalji">
+                <input type="submit" value="Pošalji" name="teset">
            </form>
-           <?php
-            include 'connect.php';
-
-            $slika=$_FILES['slika']['name'];
-            $naslov=$_POST['naslov'];
-            $sazetak=$_POST['sazetak'];
-            $sadrzaj=$_POST['sadrzaj'];
-            $kategorija=$_POST['kategorija'];
-            $datum=date('d.m.Y.');
-
-            if(isset($_POST['arhiva'])){
-                $arhiva=1;
-            }else{
-                $arhiva=0;
-            }
-            
-            $target_dir = 'images/'.$slika;
-            move_uploaded_file($_FILES['pphoto']['tmp_name'], $target_dir);
-
-            $query = "INSERT INTO newsweek(datum, naslov, sazetak, tekst, slika, kategorija, arhiva) VALUES('$datum', '$naslov', '$sazetak', '$sadrzaj', '$slika', '$kategorija', '$arhiva');";
-
-            $result = mysqli_query($dbc, $query) or die('Error querying database.');
-            mysqli_close($dbc);
-           ?>
         </section>
         <footer>
             <p>

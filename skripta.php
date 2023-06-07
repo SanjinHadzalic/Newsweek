@@ -19,7 +19,7 @@
                         <li><a href="#us">U.S.</a></li>
                         <li><a href="#world">World</a></li>
                         <li><a href="">Administracija</a></li>
-                        <li><a href="unos.html">Unos</a></li>
+                        <li><a href="unos.php">Unos</a></li>
                     </ul>
                 </nav>
             </div>
@@ -45,7 +45,7 @@
             </div>
             <section class="slika">
                 <?php
-                    $slika=$_POST['slika'];
+                    $slika=$_FILES['slika']['name'];
                     echo "<img src='images/$slika'"."<br><br>";
                 ?>
             </section>
@@ -60,6 +60,11 @@
                 <p>
                     <?php
                         echo $_POST['sadrzaj']."<br><br>";
+                    ?>
+                    <?php
+                        if(isset($_POST['da'])){
+                            include 'insert.php';
+                        }
                     ?>
                 </p>
             </section>
