@@ -59,13 +59,16 @@ img{
 .usaSection h2, .worldSection h2{
   padding-left: 10px;
 }
-.usaSection, .worldSection{
+.usaSection, .worldSection, .adminArticle{
   flex-direction: column;
   justify-content: space-between;
 }
 .column{
   width: 97%;
   padding: 5px 5px 5px 5px ;
+}
+.columnAdmin{
+  width: 97%;
 
 }
 footer{
@@ -158,6 +161,15 @@ img{
     float: left;
     width: 30.0%;
     padding: 15px;
+}
+.columnAdmin{
+  margin-left: 25%;
+  margin-right: 25%;
+  margin-top:2%;
+  margin-bottom: 2%;
+  width: 50%;
+  border: 3px solid blue;
+  padding: 10px;
 }
 .anchorArticle{
   text-decoration: none;
