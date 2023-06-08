@@ -72,9 +72,35 @@
                                     <input type="hidden" name="id" class="form-field-textual" value="'.$row['id'].'">
                                     <button type="reset" value="reset">Ponisti</button>
                                     <button type="submit" name="update" value="Prihvati">Izmjeni</button>
-                                    <button type="submit" value="delete" value="Izbrisi">Izbrisi</button>
+                                    <button type="submit" name="delete" value="Izbrisi">Izbrisi</button>
                                 </div>
                                 </form></section>';
+                }
+                // za brisanje podataka iz tablica
+                if(isset($_POST['delete'])){
+                    $id=$_POST['id'];
+                    $query="DELETE FROM newsweek WHERE id=$id";
+                    $result=mysqli_query($dbc,$query);
+                }
+
+                // za azuriranje podataka unutar tablice
+                if(isset($_POST['update'])){
+                    $picture=$_FILES['slika']['name'];
+                    $title=$_POST['title'];
+                    $about=$_POST['about'];
+                    $content=$_POST['content'];
+                    $category=$_POST['category'];
+                    if(isset($_POST['archive'])){
+                        $archive=1;
+                    }else{
+                        $archive=0;
+                    }
+                    $target_dir='iamges/'.$picture;
+                    move_uploaded_file($_FILES['slika']['name'], $target_dir);
+
+                    $id=$_POST['id'];
+                    $query="UPDATE newsweek SET naslov='$title', sazetak='$about', tekst='$content', slika='$picture', kategorija='$category', arhiva='$archive' WHERE id=$id";
+                    $result=mysqli_query($dbc, $query);
                 }
             ?>
         </section>
