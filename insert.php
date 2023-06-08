@@ -17,8 +17,13 @@
     $target_dir = 'images/'.$slika;
     move_uploaded_file($_FILES['slika']['tmp_name'], $target_dir);
 
-    $query = "INSERT INTO newsweek(datum, naslov, sazetak, tekst, slika, kategorija, arhiva) VALUES('$datum', '$naslov', '$sazetak', '$sadrzaj', '$slika', '$kategorija', '$arhiva');";
-
-    $result = mysqli_query($dbc, $query) or die('Error querying database.');
+    try{
+        $query = "INSERT INTO newsweek(datum, naslov, sazetak, tekst, slika, kategorija, arhiva) VALUES('$datum', '$naslov', '$sazetak', '$sadrzaj', '$slika', '$kategorija', '$arhiva')";
+    
+        $result = mysqli_query($dbc, $query) or die('Error querying database.');
+    } catch(mysqli_sql_exception $e){
+        var_dump(e);
+        exit;
+    }
     mysqli_close($dbc);
 ?>

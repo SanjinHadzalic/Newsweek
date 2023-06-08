@@ -12,6 +12,9 @@
                 include('header.php');
             ?>
         </header>
+        <?php
+            include 'connect.php';
+        ?>
         <section id="noviClanak">
             <div class="row">
                 <p class="unosKategorija">

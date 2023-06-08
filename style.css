@@ -50,16 +50,16 @@ nav a:hover {
   margin-top: 5px;
   border: 1px solid #c4c4c4;
   }
-.row h2{
+.usaSection h2, .worldSection h2{
   color: red;
 }
 img{
     max-width: 100%;
 }
-.row h2{
+.usaSection h2, .worldSection h2{
   padding-left: 10px;
 }
-.row{
+.usaSection, .worldSection{
   flex-direction: column;
   justify-content: space-between;
 }
@@ -140,16 +140,16 @@ nav ul li a:hover{
   margin-top: 5px;
   border: 1px solid #c4c4c4;
   }
-.row h2{
+.usaSection h2, .worldSection h2 {
   color: red;
 }
 img{
     max-width: 100%;
 }
-.row h2{
+.usaSection h2, .worldSection h2{
   padding-left: 10px;
 }
-.row::after{
+.usaSection::after, .worldSection::after{
   content: "";
   display: table;
   clear: both;

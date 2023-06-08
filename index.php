@@ -10,37 +10,52 @@
         <header>
             <?php
                 include('header.php');
-            ?>
+                ?>
         </header>
-        <section class="row">
-            <hr class="hrMain">
-            <h2 id="us">U.S.</h2>
-            <article class="column">
-                <a href="maher.html" class="anchorArticle">
-                <img src="images/maher.jpg" alt="Bill Maher">
-                <h3>
-                    Bill Maher Tears Into Restrictive New Anti-<br>Abortion Laws
-                </h3>
-            </a>
-            </article>
-            <article class="column">
-                <a href="mcafee.html" class="anchorArticle">
-                    <img src="images/mcafee.jpg" alt="John McAfee">
-                    <h3>
-                        John Mcafee Is Running for President and<br> Wants You to 'Wake the F*** Up'
-                    </h3>
-                </a>
-            </article>
-            <article class="column">
-                <a href="mcafee.html" class="anchorArticle">
-                    <img src="images/mcafee.jpg" alt="John McAfee">
-                    <h3>
-                        John Mcafee Is Running for President and<br> Wants You to 'Wake the F*** Up'
-                    </h3>
-                </a>
-            </article>
-        </section>
-        <section class="row">
+        <section class="usaSection">
+        <hr class="hrMain">
+        <h2 id="us">U.S.</h2>
+            <?php
+                include 'connect.php';
+                define('UPLPATH','images/');
+                $query="SELECT * FROM newsweek WHERE arhiva=0 AND kategorija='us' LIMIT 3";
+                $result=mysqli_query($dbc,$query);
+                    $i=0;
+                    while($row=mysqli_fetch_array($result)){
+                        echo '<article>';
+                            echo '<div class="column">';
+                            echo '<div class="usaSectionImage">';
+                            echo '<img src="' . UPLPATH . $row['slika'] . '">';
+                            echo '</div>';
+                            echo '<div class="media_body">';
+                            echo '<h3 class="title">'; 
+                            echo '<a href="clanak.php?id='.$row['id'].'" class="anchorArticle">'; 
+                            echo $row['naslov']; 
+                            echo '</a></h4>'; 
+                            echo '</div></div>'; 
+                            echo '</article>';                    }
+            ?>
+        <section class="worldSection">
+        <?php
+            include 'connect.php';
+            define('UPLPATH','images/');
+            $query="SELECT * FROM newsweek WHERE arhiva=0 AND kategorija='world' LIMIT 3";
+            $result=mysqli_query($dbc,$query);
+                $i=0;
+                while($row=mysqli_fetch_array($result)){
+                    echo '<article>';
+                        echo '<div class="column">';
+                        echo '<div class="worldSectionImage">';
+                        echo '<img src="' . UPLPATH . $row['slika'] . '">';
+                        echo '</div>';
+                        echo '<div class="media_body">';
+                        echo '<h3 class="title">'; 
+                        echo '<a href="clanak.php?id='.$row['id'].'" class="anchorArticle">'; 
+                        echo $row['naslov']; 
+                        echo '</a></h4>'; 
+                        echo '</div></div>'; 
+                        echo '</article>';                    }
+        ?>
             <hr class="hrMain">
             <h2 id="world">World</h2>
             <article class="column">
