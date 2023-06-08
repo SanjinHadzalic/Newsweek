@@ -14,9 +14,9 @@
             include('header.php');
             ?>
         </header>
-        <!-- <section id="formSection"> -->
+        <section id="formSection">
             <form enctype="multipart/form-data" action="insert.php" method="post">
-            <form>
+            <!-- <form onsubmit="return false;" action=""> -->
 
                 <label for="naslov">Naslov vijesti:</label><br>
                 <input type="text" name="naslov" id="naslov"><br><br>
