@@ -99,8 +99,13 @@
                     move_uploaded_file($_FILES['slika']['name'], $target_dir);
 
                     $id=$_POST['id'];
-                    $query="UPDATE newsweek SET naslov='$title', sazetak='$about', tekst='$content', slika='$picture', kategorija='$category', arhiva='$archive' WHERE id=$id";
-                    $result=mysqli_query($dbc, $query);
+                    try{
+                        $query="UPDATE newsweek SET naslov='$title', sazetak='$about', tekst='$content', slika='$picture', kategorija='$category', arhiva='$archive' WHERE id=$id";
+                        $result=mysqli_query($dbc, $query);
+                    } catch(mysqli_sql_exception $ex){
+                        var_dump($ex);
+                        exit;
+                    }
                 }
             ?>
         </section>
