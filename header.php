@@ -18,10 +18,10 @@
                 <a href="index.php">Početna</a>
             </li>
             <li>
-                <a href="kategorija.php?id=us">U.S.</a>
+                <a href="kategorija.php?kategorija='us'">U.S.</a>
             </li>
             <li>
-                <a href="kategorija.php?id=world">World</a>
+                <a href="kategorija.php?kategorija='world'">World</a>
             </li>
             <li>
                 <a href="administracija.php">Administracija</a>

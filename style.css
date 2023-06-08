@@ -149,10 +149,10 @@ nav ul li a:hover{
 img{
     max-width: 100%;
 }
-.usaSection h2, .worldSection h2{
+.usaSection h2, .worldSection h2, .kategorijaSection h2{
   padding-left: 10px;
 }
-.usaSection::after, .worldSection::after{
+.usaSection::after, .worldSection::after, .kategorijaSection::after{
   content: "";
   display: table;
   clear: both;
