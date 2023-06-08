@@ -22,7 +22,7 @@
     
         $result = mysqli_query($dbc, $query) or die('Error querying database.');
     } catch(mysqli_sql_exception $e){
-        var_dump(e);
+        var_dump($e);
         exit;
     }
     mysqli_close($dbc);
