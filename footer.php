@@ -1,15 +1,15 @@
 <html>
 <head>
 <style>
-
+    
 
 </style>
 </head>
 <body>
 
-<p>
+<p class="footerNew">
+    <hr class="hrFooter">
     Sanjin Hadžalić, shadzalic@tvz.hr, 2023.
 </p>
-<hr class="hrFooter">
 </body>
 </html>

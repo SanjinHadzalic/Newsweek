@@ -71,7 +71,12 @@ img{
   width: 97%;
 
 }
+/*footer*/
 footer{
+  position:absolute;
+  bottom:0;
+  width:100%;
+  height:60px;   /* Height of the footer */
   height: 100px;
 }
 .hrFooter{
@@ -199,8 +204,12 @@ img{
   margin-right: 50px;
   font-size: larger;
 }
-footer{
-  height: 100px;
+.footerNew{
+  position:absolute;
+  bottom:0;
+  width:100%;
+  height:0px;   /* Height of the footer */
+  height: 50px;
 }
 .hrFooter{
   width: 95%;
@@ -225,4 +234,8 @@ footer{
   margin-right: auto;
   width: 50%;
 }
+.kategorijaSection{
+  width: 100%;
+}
+
 }

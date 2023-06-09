@@ -15,12 +15,11 @@
             ?>
         </header>
         <section id="formSection">
-            <form enctype="multipart/form-data" action="insert.php" method="post">
-            <!-- <form onsubmit="return false;" action=""> -->
+            <form name="newForm" enctype="multipart/form-data"  action="insert.php" onsubmit="validateForm()" method="post">
 
                 <label for="naslov">Naslov vijesti:</label><br>
                 <input type="text" name="naslov" id="naslov"><br><br>
-                <span id="porukaTitle" class="bojaPoruke">222</span><br>
+                <span id="porukaTitle" class="bojaPoruke"></span><br>
 
                 <label for="kratki">Kratki sadržaj vijesti (do 50 znakova):</label><br>
                 <textarea rows="4" cols="50" name="kratki" id="kratki"></textarea>><br><br>
@@ -49,14 +48,14 @@
                 <input type="checkbox" name="arhiva" id="arhiva">
                 <label for="daArhiva">da</label><br><br>
                 
-                <button type="submit" id="slanje">Posalji</button>
+                <button type="submit" id="submit">Posalji</button>
             </form>
         </section>
 
             <script type="text/javascript">
-
+                function validateForm(){
                 // provjera forme prije slanja
-                document.getElementById("slanje").onclick = function (event) {
+                document.getElementById("submit").onclick = function (event) {
 
                     var slanjeForme = true;
 
@@ -122,13 +121,13 @@
                     if (slanjeForme != true) {
                         event.preventDefault();
                     }
-
                 }
+            }
             </script>
 
         <footer>
             <?php
-            include('footer.php');
+                include('footer.php');
             ?>
         </footer>
     </body>
