@@ -39,6 +39,7 @@
                 echo '</article>';
             }
             ?>
+        </section>
             <footer>
                 <?php
                 include('footer.php');
