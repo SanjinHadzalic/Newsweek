@@ -19,6 +19,7 @@
                 include 'connect.php';
                 define('UPLPATH','images/');
                 if($_SESSION['username']=='admin' && $_SESSION['razina']==1){
+                    // forme za administraciju
                     $query= "SELECT * FROM newsweek;";
                     $result= mysqli_query($dbc, $query);
                     while($row = mysqli_fetch_array($result)){
@@ -110,6 +111,8 @@
                             exit;
                         }
                     }
+                } else {
+                    echo 'Nemate dovoljne administratorske ovlast!<br><a href="login.php">Login</a>';
                 }
             ?>
         </section>
