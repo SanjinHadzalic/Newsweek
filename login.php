@@ -22,8 +22,6 @@
                 <input type="password" name="password"placeholder="password"><br><br>
 
                 <button type="submit" name="submit">Login</button>
-
-                <p><a href="">register now</a></p>
             </form>
             <?php
                 header('Content-Type: text/html; charset=utf-8');
@@ -50,21 +48,22 @@
                         $_SESSION['username'] = $username;
                         header('location:index.php');
                     } else {
-                        echo 'Korisnik NE postoji!';
+                        echo 'Korisnik NE postoji!<br>Morate se prvo <a href="registracija.php">registrirati</a>';
                     }
 
-                }
-                // $sql="INSERT INTO korisnik (ime, prezime, korisnicko_ime, lozinka, razina) VALUES('Jane', 'Doe', 'jadoe', '54321', 0);";
-
-                // if ($con->query($sql) === TRUE) {
-                //     echo "New record created successfully";
-                // } else {
-                //     echo "Error: " . $sql . "<br>" . $con->error;
-                // }
-                
+                }                
                 $con->close();
             ?>
         </section>
+        <script type="text/javascript">
+            
+            document.getElementById("slanje").onclick =function(event){
+
+                var slanjeForme = true;
+
+                // ime korisnika mora biti uneseno
+            }
+        </script>
             <footer>
                 <?php
                     include('footer.php');
