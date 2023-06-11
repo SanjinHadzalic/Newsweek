@@ -24,6 +24,7 @@
                 <button type="submit" name="submit">Login</button>
             </form>
             <?php
+                session_start();
                 header('Content-Type: text/html; charset=utf-8');
 
                 $servername="127.0.0.1:3307";
@@ -42,14 +43,16 @@
                     $pass = $_POST['password'];
                     $hashed_password=password_hash($pass, CRYPT_BLOWFISH);
                     
-                    $stmt = $con->prepare("SELECT lozinka FROM korisnik WHERE korisnicko_ime=? LIMIT 1");
+                    $stmt = $con->prepare("SELECT lozinka,razina FROM korisnik WHERE korisnicko_ime=? LIMIT 1");
                     $stmt->bind_param('s', $username);
                     $stmt->execute();
 
                     $isPassOK=false;
-                    $stmt->bind_result($hashFromDB);
+                    $stmt->bind_result($hashFromDB,$credDS);
                     if($stmt->fetch()==true){
                         $isPassOK=password_verify($pass,$hashFromDB);
+                        $_SESSION['username'] = $username;
+                        $_SESSION['razina'] = $credDS;
                         header("location:index.php");
                     } else {
                         echo 'Korisnik ne postoji!<br><a href="registracija.php">Rgistriraj se</a><br>';
